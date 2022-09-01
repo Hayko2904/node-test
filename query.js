@@ -9,5 +9,5 @@ module.exports.findAll = (collection) => {
 }
 
 module.exports.insertOne = (collection, filter, data) => {
-    db.collection('first').updateOne(filter, {$set: data}, { upsert: true })
+    return db.collection('first').updateOne(filter, {$set: data}, { upsert: true })
 }

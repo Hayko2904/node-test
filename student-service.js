@@ -22,9 +22,7 @@ module.exports.insertJson = async () => {
 
 module.exports.setCount = async () => {
     let firstData = await findAll('first').then(r => r)
-    console.log(firstData)
     let secondData = await findAll('second').then(r => r)
-    console.log(secondData)
     firstData.map((item) => {
         let country = secondData.find(elem => elem.country === item.country)
         insertOne('first', {'_id': item._id}, {...item, countResult: country.overallStudents - item.students.length})

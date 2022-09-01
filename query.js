@@ -1,4 +1,4 @@
-const {client, db} = require("./database")
+const { db } = require("./database")
 
 module.exports.insert = (collection, data) => {
     return db.collection(collection).insertMany(data)

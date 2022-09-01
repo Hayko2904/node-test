@@ -1,0 +1,1 @@
+create .env file then add mongodb url and database name for example look in .env.example

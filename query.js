@@ -1,4 +1,4 @@
-const { db } = require("./database")
+const {db} = require("./database")
 
 module.exports.insert = (collection, data) => {
     return db.collection(collection).insertMany(data)
@@ -9,5 +9,9 @@ module.exports.findAll = (collection) => {
 }
 
 module.exports.insertOne = (collection, filter, data) => {
-    return db.collection('first').updateOne(filter, {$set: data}, { upsert: true })
+    return db.collection('first').updateOne(filter, {$set: data}, {upsert: true})
+}
+
+module.exports.updateMany = (collection, condition, data) => {
+    return db.collection(collection).updateMany(condition, data)
 }

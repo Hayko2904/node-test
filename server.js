@@ -1,9 +1,10 @@
 const express = require('express')
-const { insertJson, setCount } = require("./student-service");
+const { insertJson, setCount, updateData } = require("./student-service");
 const app = express()
 
 const run = async function () {
     await insertJson()
+    await updateData()
     await setCount()
 }
 
